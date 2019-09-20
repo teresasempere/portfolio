@@ -1,0 +1,206 @@
+/* ==========================================================================
+    VARIABLES
+   ========================================================================== */
+$type: #262624;
+$main: #EC5F7E;
+$second:#17E9E0;
+
+@import url('https://fonts.googleapis.com/css?family=Rubik:900&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700&display=swap');
+
+
+
+
+/* Accent font*/
+$font1: 'Rubik',
+sans-serif;
+
+$font1: 'Rubik',
+sans-serif;
+
+/* Paragraph*/
+$font2: 'Open Sans',
+sans-serif;
+
+$font2: 'Open Sans',
+sans-serif;
+
+/* h */
+$font3: 'Libre Baskerville',
+serif;
+
+$font3: 'Libre Baskerville',
+serif;
+
+
+$border1: 7px solid;
+$border2: 5px dashed;
+
+
+$back_img: url("../img/background/geometry.png");
+
+/* ==========================================================================
+    GENERAL
+   ========================================================================== */
+
+* {
+    //border: .5px solid pink;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    color: $type;
+    font-size: 13px;
+    font-family: $font1;
+    margin: 0 auto;
+    scroll-behavior: smooth;
+   // background-image: $back_img;
+}
+
+/* ----- TYPOGRAPHY  ----- */
+
+p {
+    font-family: $font2;
+    color: $type;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.subtitle {
+    font-family: $font2;
+    color: $type;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.accent {
+    font-family: $font1;
+    color: $main;
+    font-size: 7rem;
+    font-weight: 900;
+}
+
+b {
+    font-family: $font3;
+    color: $type;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h1 {
+    font-family: $font2;
+    color: $type;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: $font3;
+    color: $type;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 3rem 0 3rem 0;
+
+}
+
+
+/* ==========================================================================
+    STRUCTURE
+   ========================================================================== */
+
+
+/* ----- LAYOUT  ----- */
+.indent {
+    padding: 0 0 0 10rem;
+}
+
+main {
+    margin: 12rem 30rem 8rem 30rem;
+
+    section {
+        margin: 10rem 0 10rem 0;
+    }
+}
+
+
+
+/* ----- MENU  ----- */
+
+header {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    //background-image: $back_img;
+    background-color: white;
+    z-index: 2000;
+
+    .logo {
+        width: 50%;
+        display: flex;
+        flex-flow: row nowrap;
+
+        .main {
+            font-family: $font2;
+            font-weight: 700;
+            font-size: 1.2rem;
+            align-self: center;
+        }
+
+        .description {
+            font-family: $font2;
+            font-weight: 300;
+            font-size: 1.2rem;
+            align-self: center;
+            padding: 0 0 0 .7rem;
+        }
+    }
+
+    .menu {
+
+    }
+}
+
+/* ----- INTRO  ----- */
+
+/* ----- PROJECTS  ----- */
+.project {
+    display: flex;
+    flex-flow: row wrap;
+
+    .gallery {
+        width: 50%;
+    }
+
+    .description {
+        width: 50%;
+    }
+}
+
+/* ==========================================================================
+    ANIMATIONS
+   ========================================================================== */
+
+.interaction_1 {
+    width: 40%;
+    transform-origin: left bottom;
+    transform: rotate(-10deg);
+    transition: transform 1s ease;
+
+    &:hover {
+        transform: rotate(50deg);
+        text-shadow: 2px 2px darken($color: $main, $amount: 20);
+    }
+}
