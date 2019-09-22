@@ -4,6 +4,7 @@
 $type: #262624;
 $blue: #EDF5F7;
 $pink: #F7EDEF;
+$yellow: #FAECD3;
 
 $highligh: #FCCF68;
 $hover: #FF6C86;
@@ -102,6 +103,17 @@ i {
     }
 }
 
+.fab {
+    transition: all .2s ease-in-out;
+    &:hover{
+        color: $hover;
+        transform: scale(1.1);
+    }
+}
+
+li {
+    list-style: none;
+}
 
 /* ==========================================================================
     STRUCTURE
@@ -121,7 +133,9 @@ header {
             flex-flow: row wrap;
 
             li {
-                padding: 0 0 0 1rem;
+                padding: 0 0 0 2rem;
+                font-size: 2rem;
+                color: lighten($color: $type, $amount: 30);
             }
         }
     }
@@ -166,6 +180,11 @@ header {
     }
 }
 
+.contact {
+    padding: 20% 5% 20% 5%;
+    text-align: center;
+}
+
 /* ==========================================================================
     COLORS
    ========================================================================== */
@@ -191,6 +210,9 @@ mark {
     background-color: $pink;
 }
 
+.ging {
+    background-color: $yellow;
+}
 
 /* ==========================================================================
     ANIMATIONS
@@ -217,3 +239,50 @@ mark {
         transform: translateY(-15px);
     }
 }
+
+
+
+/* ==========================================================================
+    RESPONSIVE
+   ========================================================================== */
+
+
+   @media (max-width: 900px) {
+
+    body,
+    html {
+        color: $type;
+        font-size: 9px;
+    }
+    
+    .intro {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        margin: 35% 0 35% 0;
+    
+        .hello {
+            padding: 0 0 15% 0;
+            width: 50%;
+        }
+    }
+
+    .project {
+        width: 100%;
+        padding: 15% 17% 15% 17%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+    
+        .gallery {
+            width: 100%;
+            margin: 0 0 20% 0;
+        }
+    
+        .description {
+            width: 100%;
+        }
+    }
+
+  }

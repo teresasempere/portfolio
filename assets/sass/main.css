@@ -79,6 +79,19 @@ i:hover {
   transform: scale(1.1);
 }
 
+.fab {
+  transition: all .2s ease-in-out;
+}
+
+.fab:hover {
+  color: #FF6C86;
+  transform: scale(1.1);
+}
+
+li {
+  list-style: none;
+}
+
 /* ==========================================================================
     STRUCTURE
    ========================================================================== */
@@ -95,7 +108,9 @@ header .menu ul {
 }
 
 header .menu ul li {
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 2rem;
+  font-size: 2rem;
+  color: #75756e;
 }
 
 .intro {
@@ -134,6 +149,11 @@ header .menu ul li {
   font-size: 3rem;
 }
 
+.contact {
+  padding: 20% 5% 20% 5%;
+  text-align: center;
+}
+
 /* ==========================================================================
     COLORS
    ========================================================================== */
@@ -157,6 +177,10 @@ mark {
   background-color: #F7EDEF;
 }
 
+.ging {
+  background-color: #FAECD3;
+}
+
 /* ==========================================================================
     ANIMATIONS
    ========================================================================== */
@@ -177,5 +201,41 @@ mark {
   }
   60% {
     transform: translateY(-15px);
+  }
+}
+
+/* ==========================================================================
+    RESPONSIVE
+   ========================================================================== */
+@media (max-width: 900px) {
+  body,
+  html {
+    color: #262624;
+    font-size: 9px;
+  }
+  .intro {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 35% 0 35% 0;
+  }
+  .intro .hello {
+    padding: 0 0 15% 0;
+    width: 50%;
+  }
+  .project {
+    width: 100%;
+    padding: 15% 17% 15% 17%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+  }
+  .project .gallery {
+    width: 100%;
+    margin: 0 0 20% 0;
+  }
+  .project .description {
+    width: 100%;
   }
 }
