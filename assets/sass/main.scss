@@ -2,45 +2,25 @@
     VARIABLES
    ========================================================================== */
 $type: #262624;
-$main: #EC5F7E;
-$second:#17E9E0;
+$blue: #EDF5F7;
+$pink: #F7EDEF;
 
-@import url('https://fonts.googleapis.com/css?family=Rubik:900&display=swap');
+$highligh: #FCCF68;
+$hover: #FF6C86;
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,700i&display=swap');
 
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700&display=swap');
-
-
-
-
-/* Accent font*/
-$font1: 'Rubik',
-sans-serif;
-
-$font1: 'Rubik',
-sans-serif;
-
-/* Paragraph*/
-$font2: 'Open Sans',
-sans-serif;
-
-$font2: 'Open Sans',
-sans-serif;
-
-/* h */
-$font3: 'Libre Baskerville',
-serif;
-
-$font3: 'Libre Baskerville',
-serif;
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500&display=swap');
 
 
-$border1: 7px solid;
-$border2: 5px dashed;
+/* Fonts*/
+$font1: 'Cormorant Garamond',
+Serif;
 
+$font2: 'Fira Sans',
+Sans-Serif;
 
-$back_img: url("../img/background/geometry.png");
+$shadow: 3px 3px 13px rgba(33, 32, 33, 0.13);
 
 /* ==========================================================================
     GENERAL
@@ -56,58 +36,70 @@ $back_img: url("../img/background/geometry.png");
 body,
 html {
     color: $type;
-    font-size: 13px;
+    font-size: 10px;
     font-family: $font1;
     margin: 0 auto;
     scroll-behavior: smooth;
-   // background-image: $back_img;
 }
 
 /* ----- TYPOGRAPHY  ----- */
 
+a {
+    text-decoration: none;
+    color: $type;
+}
+
 p {
     font-family: $font2;
     color: $type;
-    font-size: 1.3rem;
-    font-weight: 400;
-}
-
-.subtitle {
-    font-family: $font2;
-    color: $type;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.accent {
-    font-family: $font1;
-    color: $main;
-    font-size: 7rem;
-    font-weight: 900;
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 2rem 0 0 0;
+    line-height: 160%;
 }
 
 b {
-    font-family: $font3;
-    color: $type;
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-h1 {
     font-family: $font2;
     color: $type;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 400;
+}
+
+
+h1 {
+    font-family: $font1;
+    color: $type;
+    font-size: 2.3rem;
+    font-weight: 400;
+    margin: 3rem 0 3rem 0;
+    text-align: center;
+
 }
 
 h2 {
-    font-family: $font3;
+    font-family: $font1;
     color: $type;
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 5rem;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 102.1%;
+}
+
+h3 {
+    font-family: $font1;
+    color: $type;
+    font-size: 3rem;
+    font-weight: 400;
     margin: 3rem 0 3rem 0;
 
+}
+
+i {
+    transition: all .2s ease-in-out;
+    &:hover{
+        color: $hover;
+        transform: scale(1.1);
+    }
 }
 
 
@@ -117,90 +109,111 @@ h2 {
 
 
 /* ----- LAYOUT  ----- */
-.indent {
-    padding: 0 0 0 10rem;
-}
-
-main {
-    margin: 12rem 30rem 8rem 30rem;
-
-    section {
-        margin: 10rem 0 10rem 0;
-    }
-}
-
-
-
-/* ----- MENU  ----- */
 
 header {
-    width: 100%;
     display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    //background-image: $back_img;
-    background-color: white;
-    z-index: 2000;
-
-    .logo {
-        width: 50%;
-        display: flex;
-        flex-flow: row nowrap;
-
-        .main {
-            font-family: $font2;
-            font-weight: 700;
-            font-size: 1.2rem;
-            align-self: center;
-        }
-
-        .description {
-            font-family: $font2;
-            font-weight: 300;
-            font-size: 1.2rem;
-            align-self: center;
-            padding: 0 0 0 .7rem;
-        }
-    }
+    flex-flow: row-reverse wrap;
+    padding: 1rem 2rem 1rem 2rem;
 
     .menu {
+        ul {
+            display: flex;
+            flex-flow: row wrap;
 
+            li {
+                padding: 0 0 0 1rem;
+            }
+        }
     }
 }
 
-/* ----- INTRO  ----- */
-
-/* ----- PROJECTS  ----- */
-.project {
+.intro {
+    width: 100%;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 15% 0 15% 0;
+
+    .hello {
+        padding: 0 0 15% 0;
+        width: 20%;
+    }
+
+}
+
+.project {
+    width: 100%;
+    padding: 15% 17% 15% 17%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 
     .gallery {
-        width: 50%;
+        width: calc(50% - 6rem);
+        background-color: white;
+        box-shadow: $shadow;
     }
 
     .description {
-        width: 50%;
+        width: calc(50% - 6rem);
+    }
+
+    .footer {
+        i {
+            padding: 2rem 2rem 0 0;
+            font-size: 3rem;
+        }
     }
 }
 
 /* ==========================================================================
-    ANIMATIONS
+    COLORS
    ========================================================================== */
 
-.interaction_1 {
-    width: 40%;
-    transform-origin: left bottom;
-    transform: rotate(-10deg);
-    transition: transform 1s ease;
+::selection {
+    background: $highligh;
+}
 
-    &:hover {
-        transform: rotate(50deg);
-        text-shadow: 2px 2px darken($color: $main, $amount: 20);
+::-moz-selection {
+    background: $highligh;
+
+}
+
+mark {
+    background-color: $highligh;
+}
+
+.ugo {
+    background-color: $blue;
+}
+
+.man {
+    background-color: $pink;
+}
+
+
+/* ==========================================================================
+    ANIMATIONS
+   ========================================================================== */
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-15px);
     }
 }
