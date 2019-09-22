@@ -5,6 +5,7 @@ $type: #262624;
 $blue: #EDF5F7;
 $pink: #F7EDEF;
 $yellow: #FAECD3;
+$purple: #F5E8FF;
 
 $highligh: #FCCF68;
 $hover: #FF6C86;
@@ -141,6 +142,7 @@ header {
     }
 }
 
+
 .intro {
     width: 100%;
     display: flex;
@@ -212,6 +214,14 @@ mark {
 
 .ging {
     background-color: $yellow;
+}
+
+.wave {
+    background-color: $purple;
+}
+
+.projects {
+    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 }
 
 /* ==========================================================================
