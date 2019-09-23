@@ -138,6 +138,10 @@ header .menu ul li {
   width: calc(50% - 6rem);
   background-color: white;
   box-shadow: 3px 3px 13px rgba(33, 32, 33, 0.13);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 1%;
 }
 
 .project .description {
