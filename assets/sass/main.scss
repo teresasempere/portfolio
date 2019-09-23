@@ -98,7 +98,8 @@ h3 {
 
 i {
     transition: all .2s ease-in-out;
-    &:hover{
+
+    &:hover {
         color: $hover;
         transform: scale(1.1);
     }
@@ -106,7 +107,8 @@ i {
 
 .fab {
     transition: all .2s ease-in-out;
-    &:hover{
+
+    &:hover {
         color: $hover;
         transform: scale(1.1);
     }
@@ -261,21 +263,21 @@ mark {
    ========================================================================== */
 
 
-   @media (max-width: 900px) {
+@media (max-width: 900px) {
 
     body,
     html {
         color: $type;
         font-size: 9px;
     }
-    
+
     .intro {
         width: 100%;
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
         margin: 35% 0 35% 0;
-    
+
         .hello {
             padding: 0 0 15% 0;
             width: 50%;
@@ -288,15 +290,15 @@ mark {
         display: flex;
         flex-flow: column wrap;
         justify-content: space-between;
-    
+
         .gallery {
             width: 100%;
             margin: 0 0 20% 0;
         }
-    
+
         .description {
             width: 100%;
         }
     }
 
-  }
+}
