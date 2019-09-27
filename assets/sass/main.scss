@@ -6,6 +6,7 @@ $blue: #EDF5F7;
 $pink: #F7EDEF;
 $yellow: #FAECD3;
 $purple: #F5E8FF;
+$purple2: #855c91;
 
 $highligh: #FCCF68;
 $hover: #FF6C86;
@@ -49,6 +50,10 @@ html {
 a {
     text-decoration: none;
     color: $type;
+    &:hover {
+        color: $hover;
+        text-decoration: none;
+    }
 }
 
 p {
@@ -92,7 +97,17 @@ h3 {
     color: $type;
     font-size: 3rem;
     font-weight: 400;
-    margin: 3rem 0 3rem 0;
+    margin: 3rem 0 1rem 0;
+
+}
+
+h4 {
+    font-family: $font2;
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 2rem 0 0 0;
+    line-height: 160%;
+    margin: 0 0 3rem 0;
 
 }
 
@@ -150,14 +165,38 @@ header {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    margin: 15% 0 15% 0;
+    margin: 13% 0 13% 0;
 
     .hello {
         padding: 0 0 15% 0;
-        width: 20%;
+        width: 25%;
     }
 
 }
+
+.photo {
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    width: 12%;
+    .profile_pic {
+        transform: rotate(15deg);
+        width: 100%;
+            background-color: white;
+            box-shadow: $shadow;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            padding: 3%;
+
+            img {
+                object-fit: contain;
+                width: 100%;
+            }
+    }
+}
+
+
 
 .project {
     width: 100%;
@@ -165,9 +204,11 @@ header {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
 
     .gallery {
         width: calc(50% - 6rem);
+        height: 450px;
         background-color: white;
         box-shadow: $shadow;
         display: flex;
@@ -176,16 +217,34 @@ header {
         padding: 1%;
     }
 
+
     .description {
         width: calc(50% - 6rem);
-    }
-
-    .footer {
-        i {
-            padding: 2rem 2rem 0 0;
-            font-size: 3rem;
+        .qr {
+            width: 25%;
+            margin: 2rem 0 0 0;
+            img {
+                object-fit: contain;
+                width: 100%;
+            }
+        }
+        .ugo_link {
+            display: none;
+        }
+        .footer {
+            display: flex;
+            flex-flow: row nowrap;
+            align-content: center;
+            i {
+                padding: 2rem 0 0 1rem;
+                font-size: 3rem;
+                &.no_sep {
+                    padding: 0;
+                }
+            }
         }
     }
+
 }
 
 .contact {
@@ -212,18 +271,30 @@ mark {
 
 .ugo {
     background-color: $blue;
+    h4 {
+        color: darken($color: $blue, $amount: 50);
+    }
 }
 
 .man {
     background-color: $pink;
+    h4 {
+        color: darken($color: $pink, $amount: 50);
+    }
 }
 
 .ging {
     background-color: $yellow;
+    h4 {
+        color: darken($color: $yellow, $amount: 50);
+    }
 }
 
 .wave {
     background-color: $purple;
+    h4 {
+        color: $purple2;
+    }
 }
 
 .projects {
@@ -257,6 +328,13 @@ mark {
 }
 
 
+/* ==========================================================================
+    BOOTSTARP
+   ========================================================================== */
+
+
+
+
 
 /* ==========================================================================
     RESPONSIVE
@@ -276,11 +354,32 @@ mark {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
-        margin: 35% 0 35% 0;
+        margin: 38% 0 15% 0;
 
         .hello {
             padding: 0 0 15% 0;
+            margin: 20% 0 15% 0;
             width: 50%;
+        }
+    }
+    .photo {
+        position: absolute;
+        top: 15%;
+        right: 30%;
+        width: 35%;
+        .profile_pic {
+            transform: rotate(5deg);
+            width: 100%;
+                background-color: white;
+                box-shadow: $shadow;
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                padding: 6%;
+                img {
+                    object-fit: contain;
+                    width: 100%;
+                }
         }
     }
 
@@ -294,11 +393,23 @@ mark {
         .gallery {
             width: 100%;
             margin: 0 0 20% 0;
+            height: 250px;
         }
 
         .description {
             width: 100%;
+            .qr {
+                display: none;
+            }
+
+            .ugo_link {
+                display: block;
+            }
         }
+    }
+    .contact {
+        padding: 30% 5% 40% 5%;
+        text-align: center;
     }
 
 }
