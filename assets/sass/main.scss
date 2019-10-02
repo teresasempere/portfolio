@@ -133,6 +133,17 @@ li {
     list-style: none;
 }
 
+.year {
+    font-family: $font1;
+    color: $type;
+    font-size: 5rem;
+    font-weight: 700;
+    font-style: italic;
+    padding: 2rem 0 0 3rem;
+}
+
+
+
 /* ==========================================================================
     STRUCTURE
    ========================================================================== */
@@ -176,7 +187,7 @@ header {
 
 .photo {
     position: absolute;
-    top: 100%;
+    top: 107%;
     right: 10%;
     width: 12%;
     .profile_pic {
@@ -215,6 +226,17 @@ header {
         flex-flow: row nowrap;
         align-items: center;
         padding: 1%;
+        object-fit: contain;
+
+        .carousel-inner {
+            width: 100%;
+            height: 450px;
+            display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+
+        }
     }
 
 
@@ -250,6 +272,11 @@ header {
 .contact {
     padding: 20% 5% 20% 5%;
     text-align: center;
+}
+
+.year {
+    position: absolute;
+    background-color: none;
 }
 
 /* ==========================================================================
@@ -290,6 +317,7 @@ mark {
     }
 }
 
+
 .wave {
     background-color: $purple;
     h4 {
@@ -297,9 +325,6 @@ mark {
     }
 }
 
-.projects {
-    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-}
 
 /* ==========================================================================
     ANIMATIONS
@@ -385,20 +410,20 @@ mark {
 
     .project {
         width: 100%;
-        padding: 15% 17% 15% 17%;
+        padding: 11% 17% 11% 17%;
         display: flex;
         flex-flow: column wrap;
         justify-content: space-between;
 
         .gallery {
             width: 100%;
-            margin: 0 0 20% 0;
+            margin: 15% 0 15% 0;
             height: 250px;
         }
 
         .description {
             width: 100%;
-            .qr {
+            .qr_all {
                 display: none;
             }
 

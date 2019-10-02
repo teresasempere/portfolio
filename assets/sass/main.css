@@ -106,6 +106,15 @@ li {
   list-style: none;
 }
 
+.year {
+  font-family: "Cormorant Garamond", Serif;
+  color: #262624;
+  font-size: 5rem;
+  font-weight: 700;
+  font-style: italic;
+  padding: 2rem 0 0 3rem;
+}
+
 /* ==========================================================================
     STRUCTURE
    ========================================================================== */
@@ -142,7 +151,7 @@ header .menu ul li {
 
 .photo {
   position: absolute;
-  top: 100%;
+  top: 107%;
   right: 10%;
   width: 12%;
 }
@@ -181,6 +190,15 @@ header .menu ul li {
   flex-flow: row nowrap;
   align-items: center;
   padding: 1%;
+  object-fit: contain;
+}
+
+.project .gallery .carousel-inner {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
 }
 
 .project .description {
@@ -219,6 +237,11 @@ header .menu ul li {
 .contact {
   padding: 20% 5% 20% 5%;
   text-align: center;
+}
+
+.year {
+  position: absolute;
+  background-color: none;
 }
 
 /* ==========================================================================
@@ -266,10 +289,6 @@ mark {
 
 .wave h4 {
   color: #855c91;
-}
-
-.projects {
-  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 }
 
 /* ==========================================================================
@@ -341,20 +360,20 @@ mark {
   }
   .project {
     width: 100%;
-    padding: 15% 17% 15% 17%;
+    padding: 11% 17% 11% 17%;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
   }
   .project .gallery {
     width: 100%;
-    margin: 0 0 20% 0;
+    margin: 15% 0 15% 0;
     height: 250px;
   }
   .project .description {
     width: 100%;
   }
-  .project .description .qr {
+  .project .description .qr_all {
     display: none;
   }
   .project .description .ugo_link {
