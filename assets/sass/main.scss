@@ -50,6 +50,7 @@ html {
 a {
     text-decoration: none;
     color: $type;
+
     &:hover {
         color: $hover;
         text-decoration: none;
@@ -187,23 +188,24 @@ header {
 
 .photo {
     position: absolute;
-    top: 107%;
-    right: 10%;
+    top: 17%;
+    left: 10%;
     width: 12%;
-    .profile_pic {
-        transform: rotate(15deg);
-        width: 100%;
-            background-color: white;
-            box-shadow: $shadow;
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
-            padding: 3%;
 
-            img {
-                object-fit: contain;
-                width: 100%;
-            }
+    .profile_pic {
+        transform: rotate(-15deg);
+        width: 100%;
+        background-color: white;
+        box-shadow: $shadow;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        padding: 3%;
+
+        img {
+            object-fit: contain;
+            width: 100%;
+        }
     }
 }
 
@@ -211,67 +213,91 @@ header {
 
 .project {
     width: 100%;
-    padding: 15% 17% 15% 17%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
+    padding: 9% 17% 1% 17%;
+    height: 120vh;
 
-    .gallery {
-        width: calc(50% - 6rem);
-        height: 450px;
-        background-color: white;
-        box-shadow: $shadow;
+    .project_content {
+        padding: 7% 0 0 0;
         display: flex;
         flex-flow: row nowrap;
+        justify-content: space-between;
         align-items: center;
-        padding: 1%;
-        object-fit: contain;
 
-        .carousel-inner {
-            width: 100%;
+        .gallery {
+            width: calc(50% - 6rem);
             height: 450px;
-            display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-
-
-        }
-    }
-
-
-    .description {
-        width: calc(50% - 6rem);
-        .qr {
-            width: 25%;
-            margin: 2rem 0 0 0;
-            img {
-                object-fit: contain;
-                width: 100%;
-            }
-        }
-        .ugo_link {
-            display: none;
-        }
-        .footer {
+            background-color: white;
+            box-shadow: $shadow;
             display: flex;
             flex-flow: row nowrap;
-            align-content: center;
-            i {
-                padding: 2rem 0 0 1rem;
-                font-size: 3rem;
-                &.no_sep {
-                    padding: 0;
+            align-items: center;
+            padding: 1%;
+            object-fit: contain;
+
+            .carousel-inner {
+                width: 100%;
+                height: 450px;
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+
+
+            }
+        }
+
+
+        .description {
+            width: calc(50% - 6rem);
+
+            .qr {
+                width: 25%;
+                margin: 2rem 0 0 0;
+
+                img {
+                    object-fit: contain;
+                    width: 100%;
+                }
+            }
+
+            .ugo_link {
+                display: none;
+            }
+
+            .footer {
+                display: flex;
+                flex-flow: row nowrap;
+                align-content: center;
+
+                i {
+                    padding: 2rem 0 0 1rem;
+                    font-size: 3rem;
+
+                    &.no_sep {
+                        padding: 0;
+                    }
                 }
             }
         }
     }
 
+    .arrow_smooth {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        padding: 12% 0 5% 0;
+
+    }
+
 }
 
 .contact {
-    padding: 20% 5% 20% 5%;
+    //padding: 20% 5% 20% 5%;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
     text-align: center;
+    height: 100vh;
 }
 
 .year {
@@ -298,30 +324,58 @@ mark {
 
 .ugo {
     background-color: $blue;
+
     h4 {
         color: darken($color: $blue, $amount: 50);
+    }
+
+    .arrow_smooth {
+        i {
+            color: darken($color: $blue, $amount: 50);
+        }
     }
 }
 
 .man {
     background-color: $pink;
+
     h4 {
         color: darken($color: $pink, $amount: 50);
+    }
+
+    .arrow_smooth {
+        i {
+            color: darken($color: $pink, $amount: 50);
+        }
     }
 }
 
 .ging {
     background-color: $yellow;
+
     h4 {
         color: darken($color: $yellow, $amount: 50);
+    }
+
+    .arrow_smooth {
+        i {
+            color: darken($color: $yellow, $amount: 50);
+        }
     }
 }
 
 
 .wave {
     background-color: $purple;
+
     h4 {
         color: $purple2;
+    }
+
+    .arrow_smooth {
+        i {
+            color: $purple2;
+        }
     }
 }
 
@@ -355,9 +409,63 @@ mark {
 
 /* ==========================================================================
     BOOTSTARP
-   ========================================================================== */
+   ========================================================================== 
+
+.carousel-control-next {
+    color: black;
+    //background-color: yellow;
+    font-weight: 700;
+    right: -7rem;
+    opacity: 1;
+
+    &:hover {
+        color: $hover;
+    }
+
+    &::after {
+        opacity: 1;
+        color: black;
+    }
+
+    &:visited {
+        opacity: 1;
+        color: black;
+    }
+
+    &:active {
+        opacity: 1;
+        color: black;
+    }
+}
 
 
+.carousel-control-prev {
+    color: black;
+    //background-color: yellow;
+    font-weight: 700;
+    left: -7rem;
+    opacity: 1;
+
+    &:hover {
+        color: $hover;
+    }
+
+    &::after {
+        opacity: 1;
+        color: black;
+    }
+
+    &:visited {
+        opacity: 1;
+        color: black;
+    }
+
+    &:active {
+        opacity: 1;
+        color: black;
+    }
+}
+*/
 
 
 
@@ -387,51 +495,64 @@ mark {
             width: 50%;
         }
     }
+
     .photo {
         position: absolute;
         top: 15%;
         right: 30%;
         width: 35%;
+
         .profile_pic {
             transform: rotate(5deg);
             width: 100%;
-                background-color: white;
-                box-shadow: $shadow;
-                display: flex;
-                flex-flow: row nowrap;
-                align-items: center;
-                padding: 6%;
-                img {
-                    object-fit: contain;
-                    width: 100%;
-                }
+            background-color: white;
+            box-shadow: $shadow;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            padding: 6%;
+
+            img {
+                object-fit: contain;
+                width: 100%;
+            }
         }
     }
 
     .project {
         width: 100%;
         padding: 11% 17% 11% 17%;
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: space-between;
+        height: auto;
 
-        .gallery {
-            width: 100%;
-            margin: 15% 0 15% 0;
-            height: 250px;
+        .project_content {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+            .gallery {
+                width: 100%;
+                margin: 15% 0 15% 0;
+                height: 250px;
+            }
+
+            .description {
+                width: 100%;
+
+                .qr_all {
+                    display: none;
+                }
+
+                .ugo_link {
+                    display: block;
+                }
+            }
         }
 
-        .description {
-            width: 100%;
-            .qr_all {
-                display: none;
-            }
-
-            .ugo_link {
-                display: block;
-            }
+        .arrow_smooth {
+            display: none;
+    
         }
     }
+
     .contact {
         padding: 30% 5% 40% 5%;
         text-align: center;
