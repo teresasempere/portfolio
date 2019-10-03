@@ -429,7 +429,7 @@ mark {
   .photo {
     position: absolute;
     top: 15%;
-    right: 30%;
+    left: 30%;
     width: 35%;
   }
   .photo .profile_pic {
